@@ -1,0 +1,7 @@
+@Test
+public void testValidator276() {
+    // file:// isn't allowed by default
+    UrlValidator validator = new UrlValidator();
+    // Turn it on, and check
+    assertFalse(validator.isValid("file://C:\\some.file"), "file://c:\\ shouldn't ever be allowed, needs file:///c:/");
+}
