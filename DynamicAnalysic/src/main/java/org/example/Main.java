@@ -28,9 +28,9 @@ public class Main {
     }
 
     private static Process getProcess() throws IOException {
-        File workingDirectory = new File("C:/Users/hrodriguez/Desktop/Heberto/CS6720/Assignments/Assignment1/Commons-validator");
+        File workingDirectory = new File("Path-to-folder/Commons-validator");
         ProcessBuilder processBuilder = new ProcessBuilder(
-                "C:/Users/hrodriguez/Desktop/Heberto/CS6720/apache-maven-3.9.8-bin/apache-maven-3.9.8/bin/mvn.cmd",
+                "Path-to-folder/apache-maven-3.9.8-bin/apache-maven-3.9.8/bin/mvn.cmd",
                 "-Dtest=UrlValidatorTest", "test" // First run with test then run with jacoco:report --> // test //jacoco:report
         );
         processBuilder.redirectErrorStream(true);
